@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* -----------------main css -------------- */
+
+
+header{
+    height: 10vh;
+    width: 100vw;
+    background-color: rgb(134, 134, 134);
+    max-height: 100px;
+    min-height: 50px;
+}
+.logo{
+    height: 100%;
+    padding: 5px; 
+    width: auto;
+    display: flex; 
+    flex-direction: row;
+    float: left;
+}
+.logo img{
+    height: 100%;
+    
+}
+.logo h1{
+    margin-left: 10px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 2px rgb(63, 63, 63);
+
+}
+nav{
+    float: right;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+nav ul{
+    list-style: none;
+    display: inline-flex;
+    margin-right: 10px;
+
+}
+nav ul li{
+    padding: 10px;
+}
+
+nav ul li button{
+    font-size: 1rem;
+    padding: 3px;
+    color: rgb(44, 44, 44);
+    background-color: rgb(199, 199, 199);
+    box-shadow: 4px 4px 4px black, -3px -3px 4px white;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    min-width: 70px;
+    transition: .2s;
+}
+nav ul li button:focus{
+    box-shadow: none;
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^ secton^^^^^^^^^^^^^^^^^^^^^^ */
+
+section{
+    height: 80vh;
+    width: 100vw;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section > div{  
+    height: 80vh;
+    width: 100vw;
+    position: absolute;
+
+}
+
+/* ----------------------------------------------------------home--------------------------------------------- */
+.home{
+    z-index: 10;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    background-image: url(images/back.jpg);
+    background-size: auto 70vw;
+}
+.homea , .homeb{
+    height: 100%;
+    width: 50%;  
+    
+}
+.fiverr{
+    position: relative;
+    top: 150px;
+    left: 150px;
+}
+.fiverr > img{ 
+    width: 350px;
+}
+.fiverr::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: -50px;
+    top: -250px;
+    height: 100px;
+    width: 70px;
+    background-color: black;
+    opacity: 40%;
+    border-radius: 10px;
+    animation:  infinite 5s up;
+    
+}
+@keyframes up{
+    0%{ top: -250px;} 
+    50%{top: -150px;}
+}
+.fiverr::after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 300px;
+    top: -200px;
+    height: 150px;
+    width: 100px;
+    background-color: black;
+    opacity: 40%;
+    border-radius: 10px;
+    animation:linear  infinite 7s down;
+    z-index: -1;
+    
+}
+@keyframes down{
+    0%{ top: -200px;} 
+    50%{top: -100px;}
+}
+.homeb{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.homeb  h2, .homeb h3{
+    color: white;  
+    
+}
+.homeb h2{
+    font-size: 40px;
+}
+
+
+
+
+footer{
+    height: 10vh;
+    min-height: 50px;
+    max-height: 100px;
+    background-color: rgb(24, 24, 24);
+    display: flex;
+    flex-direction: row;
+}
+.left , .right{
+    height: 100%;
+    width: 50%; 
+} 
+a{
+    text-decoration: none;
+    color: white;
+}
+.left p{
+    color: rgb(124, 124, 124);
+    padding: 2px 0 2px 10px;
+}
+
+.right p{
+    color: rgb(153, 153, 153);
+    padding: 5px 10px 5px 0px ;
+    text-align: right;
+}
+
+/* ---------------------------------------------contact us------------------------------- */
+.contact{
+    z-index: 0;
+    background-image: url(images/back.jpg);
+    background-size: auto 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact > address > h2{
+    color: white;
+    padding: 10px;
+
+}
+/* ---------------------------social-------------------------------------- */
+.social{
+    z-index: 0;
+    background-image: url(images/back.jpg);
+    background-size: auto 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scl{
+    height: 70px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 50%;
+}
+.scl:hover{
+    box-shadow: 5px 5px 5px black, -2px -2px 5px white ;
+}
+
+/* ------------------------------------descripton ------------------------------------*/
+.description{
+    z-index: 0;
+    background-image: url(images/back.jpg);
+    background-size: auto 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.description p{
+    color: white;
+    font-size: 20px;
+    text-shadow: 0 0 2px black;
+}
